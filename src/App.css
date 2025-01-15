@@ -1,0 +1,325 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background-color: #212121;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+ 
+#root {
+  width: min(1480px, 100%);
+  margin: 0;
+  height: 100vh;
+}
+ 
+/* Component styles */
+.NewDay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 100%;
+  border: 1px solid #444;
+}
+ 
+.Date {
+  color: #b0b0b0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+ 
+.LectureNo {
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+ 
+.Header {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  text-align: center;
+  margin: 1.5rem 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+ 
+.NoteContainer {
+  padding: 2.5rem;
+  max-width: 1240px;
+  margin: 2rem auto;
+  background: #333;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.Paragraph {
+  color: #d0d0d0;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.BulletList {
+  margin: 1.5rem 0 1.5rem 2rem;
+  color: #d0d0d0;
+}
+
+.BulletList li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Code Block Styling (ChatGPT-inspired) */
+.CodeBlock {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  font-family: 'Menlo', 'Monaco', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  border: 1px solid #444;
+  color: #e0e0e0;
+  overflow-x: auto;
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+}
+
+/* Code Block syntax highlighting (optional, based on content) */
+.CodeBlock code {
+  color: #f8f8f2;
+  background-color: transparent;
+  font-size: 1.05rem;
+}
+
+.CodeBlock span {
+  color: #ff79c6; /* pink color for strings */
+}
+
+.CodeBlock .keyword {
+  color: #8be9fd; /* cyan color for keywords */
+}
+
+.CodeBlock .comment {
+  color: #6272a4; /* grayish blue for comments */
+}
+
+.CodeBlock .function {
+  color: #50fa7b; /* green for functions */
+}
+
+.ComparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #444;
+  margin: 1.5rem 0;
+}
+
+.ComparisonTable th {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #444;
+}
+
+.ComparisonTable td {
+  padding: 0.875rem 1rem;
+  color: #d0d0d0;
+  border-bottom: 1px solid #444;
+}
+
+.ComparisonTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ComparisonTable tbody tr:hover {
+  background-color: #444;
+}
+
+.ComparisonTable p {
+  color: #a0a0a0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* Additional Styles for Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Card Component */
+.Card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem auto;
+  border: 1px solid #444;
+  max-width: 320px;
+  color: #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.CardHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 0.75rem;
+}
+
+.CardBody {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  margin-bottom: 1.5rem;
+}
+
+.CardFooter {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+/* Button Component */
+.Button {
+  background-color: #6366f1;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Button:hover {
+  background-color: #4f46e5;
+  transform: scale(1.05);
+}
+
+.Button:active {
+  transform: scale(0.95);
+}
+
+.Button--Secondary {
+  background-color: #444;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+.Button--Secondary:hover {
+  background-color: #555;
+}
+
+/* Footer Component */
+.Footer {
+  background-color: #2a2a2a;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  color: #b0b0b0;
+  border-top: 1px solid #444;
+}
+
+.Footer a {
+  color: #6366f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Footer a:hover {
+  color: #4f46e5;
+}
+
+/* Sidebar Component */
+.Sidebar {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  width: 280px;
+  min-height: 100vh;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+  color: #d0d0d0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.SidebarHeader {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.SidebarMenu {
+  list-style: none;
+  padding: 0;
+}
+
+.SidebarMenu li {
+  margin-bottom: 1.25rem;
+}
+
+.SidebarMenu a {
+  color: #d0d0d0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.SidebarMenu a:hover {
+  color: #6366f1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .Sidebar {
+    width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+
+  .Card {
+    max-width: 100%;
+  }
+}
